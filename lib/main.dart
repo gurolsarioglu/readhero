@@ -20,6 +20,7 @@ import 'views/student/quiz_intro_view.dart';
 import 'views/student/quiz_view.dart';
 import 'views/student/quiz_result_view.dart';
 import 'views/student/rewards_showcase_view.dart';
+import 'views/student/ai_test_view.dart';
 import 'views/parent/rewards_view.dart';
 
 Future<void> main() async {
@@ -65,6 +66,7 @@ class ReadHeroApp extends StatelessWidget {
           AppRoutes.reading: (context) => const ReadingView(),
           AppRoutes.rewardsShowcase: (context) => const RewardsShowcaseView(),
           AppRoutes.rewardManagement: (context) => const RewardsView(),
+          AppRoutes.aiTest: (context) => const AITestView(),
         },
         onGenerateRoute: (settings) {
           if (settings.name == AppRoutes.quizIntro) {

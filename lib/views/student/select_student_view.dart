@@ -120,7 +120,7 @@ class _SelectStudentViewState extends State<SelectStudentView> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 16,
                       mainAxisSpacing: 16,
-                      childAspectRatio: 0.85,
+                      childAspectRatio: 0.70, // Taşmayı önlemek için yükseklik oranı artırıldı
                     ),
                     itemCount: studentController.students.length,
                     itemBuilder: (context, index) {
