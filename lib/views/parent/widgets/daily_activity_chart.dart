@@ -39,14 +39,17 @@ class _DailyActivityChartState extends State<DailyActivityChart> {
       final Map<DateTime, int> activityMap = {};
       
       for (var session in sessions) {
+        // startTime bir timestamp (int) - DateTime'a dönüştür
+        final startDate = DateTime.fromMillisecondsSinceEpoch(session.startTime);
         final date = DateTime(
-          session.startTime.year,
-          session.startTime.month,
-          session.startTime.day,
+          startDate.year,
+          startDate.month,
+          startDate.day,
         );
         
         // O gündeki toplam okuma süresini hesapla (dakika)
-        final minutes = session.duration.inMinutes;
+        // duration saniye cinsinden int
+        final minutes = (session.duration ?? 0) ~/ 60;
         activityMap[date] = (activityMap[date] ?? 0) + minutes;
       }
 

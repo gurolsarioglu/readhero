@@ -66,6 +66,20 @@ class AIService extends ChangeNotifier {
       updatedAt: now,
     );
   }
+
+  /// Kelime anlamını açıkla - kelime defteri için
+  Future<String> explainWord(String word) async {
+    final prompt = '''
+"$word" kelimesinin Türkçe anlamını ve örnek bir cümle yaz.
+Format: Anlam: [anlam] Örnek: [örnek cümle]
+Kısa ve çocukların anlayabileceği şekilde yaz.
+''';
+    final result = await generateText(prompt);
+    if (result.isEmpty) {
+      return 'Anlam: Bu kelimenin anlamı yüklenemedi.';
+    }
+    return result;
+  }
 }
 
 class StoryGenerator {

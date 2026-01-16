@@ -45,6 +45,7 @@ dependencies:
   
   # Animations
   confetti: ^0.7.0
+  shared_preferences: ^2.5.4
 
   
   # PDF (MVP Sonrası)

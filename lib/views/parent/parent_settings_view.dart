@@ -536,7 +536,7 @@ class _ParentSettingsViewState extends State<ParentSettingsView> {
             child: const Text('İptal'),
           ),
           TextButton(
-            onPressed: () {
+            onPressed: () async {
               if (controller.text == 'SİL') {
                 Navigator.pop(context);
                 final success = await context.read<AuthController>().deleteAccount();

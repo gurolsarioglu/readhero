@@ -1,0 +1,351 @@
+﻿Analyzing readhero...                                           
+
+   info - The imported package 'shared_preferences' isn't a dependency of the importing package - lib\controllers\auth_controller.dart:5:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:shared_preferences/shared_preferences.dart' - lib\controllers\auth_controller.dart:5:8 - uri_does_not_exist
+  error - Undefined name 'SharedPreferences' - lib\controllers\auth_controller.dart:97:27 - undefined_identifier
+  error - Undefined name 'SharedPreferences' - lib\controllers\auth_controller.dart:151:27 - undefined_identifier
+  error - Undefined name 'SharedPreferences' - lib\controllers\auth_controller.dart:173:27 - undefined_identifier
+  error - Undefined name 'SharedPreferences' - lib\controllers\auth_controller.dart:514:27 - undefined_identifier
+   info - Dangling library doc comment - lib\controllers\controllers.dart:1:1 - dangling_library_doc_comments
+   info - The private field _userAnswers could be 'final' - lib\controllers\quiz_controller.dart:22:17 - prefer_final_fields
+warning - The value of the field '_eyeBreakService' isn't used - lib\controllers\reading_controller.dart:12:25 - unused_field
+warning - The value of the field '_pointsService' isn't used - lib\controllers\reading_controller.dart:13:23 - unused_field
+warning - The declaration '_saveReadingSession' isn't referenced - lib\controllers\reading_controller.dart:219:16 - unused_element
+   info - Use interpolation to compose strings and values - lib\controllers\reading_controller.dart:335:12 - prefer_interpolation_to_compose_strings
+   info - Use interpolation to compose strings and values - lib\controllers\student_controller.dart:402:12 - prefer_interpolation_to_compose_strings
+   info - Unnecessary braces in a string interpolation - lib\core\constants\ai_prompts.dart:13:36 - unnecessary_brace_in_string_interps
+  error - Target of URI doesn't exist: '../services/sound_effects_service.dart' - lib\core\utils\sound_snackbar.dart:2:8 - uri_does_not_exist
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundSnackBar' - lib\core\utils\sound_snackbar.dart:6:32 - undefined_method
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:9:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animations.dart:85:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animations.dart:91:47 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:131:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animations.dart:193:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animations.dart:204:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animations.dart:211:26 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:231:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:289:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:344:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animations.dart:403:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_error_widget.dart:34:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_error_widget.dart:105:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_error_widget.dart:107:51 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_error_widget.dart:147:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_error_widget.dart:149:53 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\badge_popup.dart:100:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\badge_popup.dart:208:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\badge_popup.dart:249:65 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\badge_popup.dart:253:69 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\blink_reminder_widget.dart:11:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\blink_reminder_widget.dart:138:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\blink_reminder_widget.dart:298:61 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\blue_light_filter_widget.dart:8:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\blue_light_filter_widget.dart:44:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:100:19 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:111:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:123:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:140:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:180:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_card.dart:224:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\loading_animations.dart:173:33 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\loading_animations.dart:250:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\mascot_widget.dart:23:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\mascot_widget.dart:134:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\mascot_widget.dart:136:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\mascot_widget.dart:161:33 - deprecated_member_use
+  error - Target of URI doesn't exist: '../services/sound_effects_service.dart' - lib\core\widgets\sound_buttons.dart:2:8 - uri_does_not_exist
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundButton' - lib\core\widgets\sound_buttons.dart:27:23 - undefined_method
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundIconButton' - lib\core\widgets\sound_buttons.dart:59:23 - undefined_method
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundTextButton' - lib\core\widgets\sound_buttons.dart:91:23 - undefined_method
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundOutlinedButton' - lib\core\widgets\sound_buttons.dart:123:23 - undefined_method
+  error - The method 'SoundEffectsService' isn't defined for the type 'SoundFloatingActionButton' - lib\core\widgets\sound_buttons.dart:155:23 - undefined_method
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:15:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:19:5 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:27:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:29:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:46:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:57:9 - avoid_print
+   info - Don't invoke 'print' in production code - lib\database\database_seeder.dart:60:7 - avoid_print
+warning - Unused import: 'views/student/quiz_view.dart' - lib\main.dart:20:8 - unused_import
+warning - Unused import: 'views/student/quiz_result_view.dart' - lib\main.dart:21:8 - unused_import
+   info - Unnecessary 'this.' qualifier - lib\models\difficult_word.dart:25:8 - unnecessary_this
+   info - Unnecessary 'this.' qualifier - lib\models\goal.dart:45:8 - unnecessary_this
+   info - Unnecessary 'this.' qualifier - lib\models\goal.dart:46:8 - unnecessary_this
+   info - Unnecessary braces in a string interpolation - lib\models\reading_session_model.dart:138:68 - unnecessary_brace_in_string_interps
+   info - Unnecessary 'this.' qualifier - lib\models\reward_model.dart:27:8 - unnecessary_this
+   info - Use interpolation to compose strings and values - lib\services\auth_service.dart:268:12 - prefer_interpolation_to_compose_strings
+   info - The 'if' statement could be replaced by a null-aware assignment - lib\services\eye_break_service.dart:136:5 - prefer_conditional_assignment
+   info - The imported package 'shared_preferences' isn't a dependency of the importing package - lib\services\eye_health_service.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:shared_preferences/shared_preferences.dart' - lib\services\eye_health_service.dart:2:8 - uri_does_not_exist
+  error - Undefined class 'SharedPreferences' - lib\services\eye_health_service.dart:24:3 - undefined_class
+  error - Undefined name 'SharedPreferences' - lib\services\eye_health_service.dart:28:20 - undefined_identifier
+   info - The imported package 'shared_preferences' isn't a dependency of the importing package - lib\services\sound_effects_service.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:shared_preferences/shared_preferences.dart' - lib\services\sound_effects_service.dart:2:8 - uri_does_not_exist
+  error - Undefined name 'SharedPreferences' - lib\services\sound_effects_service.dart:19:25 - undefined_identifier
+  error - Undefined name 'SharedPreferences' - lib\services\sound_effects_service.dart:26:25 - undefined_identifier
+   info - Use interpolation to compose strings and values - lib\services\student_service.dart:113:12 - prefer_interpolation_to_compose_strings
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\login_view.dart:90:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\login_view.dart:250:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\onboarding_view.dart:178:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\register_view.dart:298:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\splash_view.dart:103:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\splash_view.dart:129:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\auth\splash_view.dart:139:40 - deprecated_member_use
+warning - The declaration '_verifyPhone' isn't referenced - lib\views\auth\verification_view.dart:65:16 - unused_element
+warning - The declaration '_resendPhoneCode' isn't referenced - lib\views\auth\verification_view.dart:102:16 - unused_element
+   info - Don't use 'BuildContext's across async gaps - lib\views\parent\audio_recordings_view.dart:118:28 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\audio_recordings_view.dart:269:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\audio_recordings_view.dart:454:33 - deprecated_member_use
+  error - The name 'ReadingSession' isn't a type, so it can't be used as a type argument - lib\views\parent\detailed_report_view.dart:28:8 - non_type_as_type_argument
+  error - The name 'QuizResult' isn't a type, so it can't be used as a type argument - lib\views\parent\detailed_report_view.dart:29:8 - non_type_as_type_argument
+warning - The value of the field '_totalQuizzes' isn't used - lib\views\parent\detailed_report_view.dart:37:7 - unused_field
+  error - Undefined name 'ReadingSession' - lib\views\parent\detailed_report_view.dart:101:44 - undefined_identifier
+  error - Undefined name 'QuizResult' - lib\views\parent\detailed_report_view.dart:115:44 - undefined_identifier
+  error - The returned type 'double' isn't returnable from a 'int' function, as required by the closure's context - lib\views\parent\detailed_report_view.dart:132:25 - return_of_invalid_type_from_closure
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\detailed_report_view.dart:132:40 - unchecked_use_of_nullable_value
+  error - The property 'completionRate' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\detailed_report_view.dart:136:53 - unchecked_use_of_nullable_value
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\detailed_report_view.dart:142:41 - unchecked_use_of_nullable_value
+  error - The returned type 'double' isn't returnable from a 'int' function, as required by the closure's context - lib\views\parent\detailed_report_view.dart:152:24 - return_of_invalid_type_from_closure
+  error - The property 'score' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\detailed_report_view.dart:152:35 - unchecked_use_of_nullable_value
+  error - The property 'isPerfect' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\detailed_report_view.dart:155:52 - unchecked_use_of_nullable_value
+  error - Undefined class 'ReadingSession' - lib\views\parent\detailed_report_view.dart:416:28 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\detailed_report_view.dart:421:50 - deprecated_member_use
+  error - Undefined class 'QuizResult' - lib\views\parent\detailed_report_view.dart:511:25 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\detailed_report_view.dart:517:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\detailed_report_view.dart:518:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\difficult_words_view.dart:276:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\difficult_words_view.dart:277:30 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\parent\parent_dashboard_view.dart:18:9 - use_super_parameters
+  error - Undefined class 'Student' - lib\views\parent\parent_dashboard_view.dart:25:3 - undefined_class
+  error - 1 positional argument expected by 'loadStudents', but 0 found - lib\views\parent\parent_dashboard_view.dart:38:42 - not_enough_positional_arguments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:82:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:139:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:149:52 - deprecated_member_use
+  error - The name 'Student' isn't a type, so it can't be used as a type argument - lib\views\parent\parent_dashboard_view.dart:175:29 - non_type_as_type_argument
+  error - The name 'Student' isn't a type, so it can't be used as a type argument - lib\views\parent\parent_dashboard_view.dart:184:40 - non_type_as_type_argument
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:356:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:359:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:418:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:468:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:497:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_dashboard_view.dart:544:32 - deprecated_member_use
+warning - Unused import: '../../core/widgets/widgets.dart' - lib\views\parent\parent_settings_view.dart:4:8 - unused_import
+warning - Unused import: '../../controllers/student_controller.dart' - lib\views\parent\parent_settings_view.dart:5:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\views\parent\parent_settings_view.dart:10:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:215:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:237:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:263:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:264:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:281:76 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\parent\parent_settings_view.dart:286:7 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:314:59 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:317:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:327:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\parent_settings_view.dart:347:56 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\views\parent\parent_settings_view.dart:470:30 - use_build_context_synchronously
+  error - The await expression can only be used in an async function - lib\views\parent\parent_settings_view.dart:542:33 - await_in_wrong_context
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\views\parent\parent_settings_view.dart:544:32 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\views\parent\parent_settings_view.dart:545:40 - use_build_context_synchronously
+   info - Parameter 'key' could be a super parameter - lib\views\parent\quiz_history_view.dart:11:9 - use_super_parameters
+  error - The name 'QuizResult' isn't a type, so it can't be used as a type argument - lib\views\parent\quiz_history_view.dart:21:8 - non_type_as_type_argument
+  error - The name 'Story' isn't a type, so it can't be used as a type argument - lib\views\parent\quiz_history_view.dart:22:8 - non_type_as_type_argument
+  error - The name 'Story' isn't a type, so it can't be used as a type argument - lib\views\parent\quiz_history_view.dart:39:22 - non_type_as_type_argument
+  error - The name 'QuizResult' isn't a type, so it can't be used as a type argument - lib\views\parent\quiz_history_view.dart:58:8 - non_type_as_type_argument
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:61:40 - unchecked_use_of_nullable_value
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:63:41 - unchecked_use_of_nullable_value
+  error - Undefined class 'Story' - lib\views\parent\quiz_history_view.dart:69:3 - undefined_class
+  error - Undefined class 'QuizResult' - lib\views\parent\quiz_history_view.dart:69:29 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:103:44 - deprecated_member_use
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:157:51 - unchecked_use_of_nullable_value
+  error - The property 'isPerfect' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:158:52 - unchecked_use_of_nullable_value
+  error - The property 'score' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:161:34 - unchecked_use_of_nullable_value
+  error - The property 'totalQuestions' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:161:44 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:161:86 - unchecked_use_of_nullable_value
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:168:69 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:175:44 - deprecated_member_use
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:243:37 - unchecked_use_of_nullable_value
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\quiz_history_view.dart:249:38 - unchecked_use_of_nullable_value
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:266:46 - deprecated_member_use
+  error - Undefined class 'QuizResult' - lib\views\parent\quiz_history_view.dart:275:27 - undefined_class
+  error - Undefined class 'Story' - lib\views\parent\quiz_history_view.dart:275:46 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:328:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:368:63 - deprecated_member_use
+  error - Undefined class 'QuizResult' - lib\views\parent\quiz_history_view.dart:410:27 - undefined_class
+  error - Undefined class 'Story' - lib\views\parent\quiz_history_view.dart:410:46 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:436:55 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:458:69 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:490:53 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\quiz_history_view.dart:492:72 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\parent\reading_history_view.dart:11:9 - use_super_parameters
+  error - The name 'ReadingSession' isn't a type, so it can't be used as a type argument - lib\views\parent\reading_history_view.dart:21:8 - non_type_as_type_argument
+  error - The name 'Story' isn't a type, so it can't be used as a type argument - lib\views\parent\reading_history_view.dart:22:8 - non_type_as_type_argument
+  error - The name 'Story' isn't a type, so it can't be used as a type argument - lib\views\parent\reading_history_view.dart:40:22 - non_type_as_type_argument
+  error - The property 'startTime' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:62:19 - unchecked_use_of_nullable_value
+  error - The property 'startTime' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:62:41 - unchecked_use_of_nullable_value
+  error - The property 'startTime' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:63:19 - unchecked_use_of_nullable_value
+  error - The property 'startTime' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:63:41 - unchecked_use_of_nullable_value
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:67:19 - unchecked_use_of_nullable_value
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:67:40 - unchecked_use_of_nullable_value
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:68:19 - unchecked_use_of_nullable_value
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:68:40 - unchecked_use_of_nullable_value
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:72:19 - unchecked_use_of_nullable_value
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:72:35 - unchecked_use_of_nullable_value
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:73:19 - unchecked_use_of_nullable_value
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:73:35 - unchecked_use_of_nullable_value
+  error - Undefined class 'Story' - lib\views\parent\reading_history_view.dart:79:3 - undefined_class
+  error - Undefined class 'ReadingSession' - lib\views\parent\reading_history_view.dart:79:30 - undefined_class
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:81:43 - unchecked_use_of_nullable_value
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\reading_history_view.dart:187:42 - deprecated_member_use
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:230:23 - unchecked_use_of_nullable_value
+  error - The returned type 'num' isn't returnable from a 'int' function, as required by the closure's context - lib\views\parent\reading_history_view.dart:231:28 - return_of_invalid_type_from_closure
+  error - The argument type 'Object?' can't be assigned to the parameter type 'num'.  - lib\views\parent\reading_history_view.dart:231:32 - argument_type_not_assignable
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:234:34 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\views\parent\reading_history_view.dart:234:58 - unchecked_use_of_nullable_value
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\reading_history_view.dart:241:65 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\reading_history_view.dart:248:42 - deprecated_member_use
+  error - Undefined class 'ReadingSession' - lib\views\parent\reading_history_view.dart:300:28 - undefined_class
+  error - Undefined class 'Story' - lib\views\parent\reading_history_view.dart:300:52 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\reading_history_view.dart:334:85 - deprecated_member_use
+  error - Undefined class 'ReadingSession' - lib\views\parent\reading_history_view.dart:408:28 - undefined_class
+  error - Undefined class 'Story' - lib\views\parent\reading_history_view.dart:408:52 - undefined_class
+   info - Parameter 'key' could be a super parameter - lib\views\parent\rewards_view.dart:15:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\rewards_view.dart:101:57 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\rewards_view.dart:106:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\rewards_view.dart:231:43 - deprecated_member_use
+   info - Missing type annotation - lib\views\parent\rewards_view.dart:440:30 - strict_top_level_inference
+   info - Don't use 'BuildContext's across async gaps - lib\views\parent\rewards_view.dart:604:31 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\views\parent\rewards_view.dart:605:30 - use_build_context_synchronously
+   info - Parameter 'key' could be a super parameter - lib\views\parent\widgets\daily_activity_chart.dart:10:9 - use_super_parameters
+  error - The getter 'year' isn't defined for the type 'int' - lib\views\parent\widgets\daily_activity_chart.dart:43:29 - undefined_getter
+  error - The getter 'month' isn't defined for the type 'int' - lib\views\parent\widgets\daily_activity_chart.dart:44:29 - undefined_getter
+  error - The getter 'day' isn't defined for the type 'int' - lib\views\parent\widgets\daily_activity_chart.dart:45:29 - undefined_getter
+  error - The property 'inMinutes' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\daily_activity_chart.dart:49:42 - unchecked_use_of_nullable_value
+  error - A value of type 'double' can't be assigned to a variable of type 'int' - lib\views\parent\widgets\daily_activity_chart.dart:50:29 - invalid_assignment
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:199:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:201:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:203:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:205:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:242:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:244:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:246:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\daily_activity_chart.dart:248:47 - deprecated_member_use
+warning - Unused import: '../../../models/models.dart' - lib\views\parent\widgets\quiz_performance_chart.dart:5:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\views\parent\widgets\quiz_performance_chart.dart:10:9 - use_super_parameters
+  error - The name 'QuizResult' isn't a type, so it can't be used as a type argument - lib\views\parent\widgets\quiz_performance_chart.dart:20:8 - non_type_as_type_argument
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\quiz_performance_chart.dart:61:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\quiz_performance_chart.dart:121:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\quiz_performance_chart.dart:139:45 - deprecated_member_use
+  error - The property 'isPassed' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\quiz_performance_chart.dart:210:51 - unchecked_use_of_nullable_value
+  error - The property 'isPerfect' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\quiz_performance_chart.dart:211:52 - unchecked_use_of_nullable_value
+  error - The property 'score' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\quiz_performance_chart.dart:214:34 - unchecked_use_of_nullable_value
+  error - The property 'totalQuestions' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\quiz_performance_chart.dart:214:44 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\views\parent\widgets\quiz_performance_chart.dart:214:86 - unchecked_use_of_nullable_value
+warning - Unused import: '../../../models/models.dart' - lib\views\parent\widgets\reading_progress_chart.dart:5:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\views\parent\widgets\reading_progress_chart.dart:11:9 - use_super_parameters
+  error - The name 'ReadingSession' isn't a type, so it can't be used as a type argument - lib\views\parent\widgets\reading_progress_chart.dart:22:8 - non_type_as_type_argument
+  error - The method 'isAfter' isn't defined for the type 'int' - lib\views\parent\widgets\reading_progress_chart.dart:44:37 - undefined_method
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\reading_progress_chart.dart:70:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\reading_progress_chart.dart:173:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\reading_progress_chart.dart:232:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\reading_progress_chart.dart:285:45 - deprecated_member_use
+  error - The property 'wpm' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\reading_progress_chart.dart:337:34 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\views\parent\widgets\reading_progress_chart.dart:337:58 - unchecked_use_of_nullable_value
+  error - The property 'duration' can't be unconditionally accessed because the receiver can be 'null' - lib\views\parent\widgets\reading_progress_chart.dart:341:27 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\views\parent\widgets\reading_progress_chart.dart:342:33 - unchecked_use_of_nullable_value
+   info - Parameter 'key' could be a super parameter - lib\views\parent\widgets\summary_card_widget.dart:11:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\summary_card_widget.dart:29:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\parent\widgets\summary_card_widget.dart:51:30 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\settings\eye_settings_view.dart:6:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\settings\eye_settings_view.dart:78:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\settings\eye_settings_view.dart:79:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\settings\eye_settings_view.dart:83:57 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\settings\eye_settings_view.dart:130:11 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\settings\eye_settings_view.dart:173:11 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\settings\eye_settings_view.dart:236:11 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\settings\eye_settings_view.dart:311:33 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\views\settings\eye_settings_view.dart:360:31 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\views\settings\eye_settings_view.dart:361:38 - use_build_context_synchronously
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\settings\sound_settings_view.dart:43:15 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\settings\sound_settings_view.dart:186:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\add_student_view.dart:245:59 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\ai_test_view.dart:320:68 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\ai_test_view.dart:337:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\ai_test_view.dart:368:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:87:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:145:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:168:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:209:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:243:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\eye_break_view.dart:269:42 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\views\student\generate_story_view.dart:159:19 - deprecated_member_use
+  error - The named parameter 'fontSize' isn't defined - lib\views\student\generate_story_view.dart:212:19 - undefined_named_parameter
+   info - Parameter 'key' could be a super parameter - lib\views\student\goals_view.dart:10:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\goals_view.dart:130:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\goals_view.dart:166:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\goals_view.dart:253:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\goals_view.dart:286:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\goals_view.dart:327:42 - deprecated_member_use
+   info - The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\views\student\library_view.dart:2:8 - unnecessary_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\library_view.dart:190:46 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\views\student\library_view.dart:404:17 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\student\quiz_intro_view.dart:19:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_intro_view.dart:30:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_intro_view.dart:62:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_intro_view.dart:158:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_intro_view.dart:170:28 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\student\quiz_result_view.dart:19:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:55:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:179:24 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:220:31 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:226:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:322:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_result_view.dart:334:28 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\student\quiz_view.dart:19:9 - use_super_parameters
+   info - 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre - lib\views\student\quiz_view.dart:41:12 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:45:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:87:57 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:137:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:164:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:165:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:222:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\quiz_view.dart:281:33 - deprecated_member_use
+   info - 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre - lib\views\student\reading_view.dart:157:12 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\reading_view.dart:239:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\reading_view.dart:292:45 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\views\student\rewards_showcase_view.dart:17:9 - use_super_parameters
+warning - The value of the field '_pointsService' isn't used - lib\views\student\rewards_showcase_view.dart:24:23 - unused_field
+   info - Missing type annotation - lib\views\student\rewards_showcase_view.dart:80:27 - strict_top_level_inference
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:86:55 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:91:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:224:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:237:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:239:51 - deprecated_member_use
+   info - Missing type annotation - lib\views\student\rewards_showcase_view.dart:384:26 - strict_top_level_inference
+   info - Missing type annotation - lib\views\student\rewards_showcase_view.dart:384:34 - strict_top_level_inference
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\rewards_showcase_view.dart:449:43 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\views\student\rewards_showcase_view.dart:534:30 - use_build_context_synchronously
+   info - Missing type annotation - lib\views\student\rewards_showcase_view.dart:554:31 - strict_top_level_inference
+   info - Missing type annotation - lib\views\student\select_student_view.dart:187:28 - strict_top_level_inference
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\select_student_view.dart:201:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\select_student_view.dart:241:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_card_widget.dart:29:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_card_widget.dart:42:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_card_widget.dart:185:22 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_detail_view.dart:52:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_detail_view.dart:60:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_detail_view.dart:158:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_detail_view.dart:245:22 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\story_detail_view.dart:247:41 - deprecated_member_use
+warning - Unused import: '../../../models/story_model.dart' - lib\views\student\widgets\audio_recorder_widget.dart:10:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\views\student\widgets\audio_recorder_widget.dart:287:33 - deprecated_member_use
+  error - The method 'explainWord' isn't defined for the type 'AIService' - lib\views\student\widgets\word_marker_widget.dart:45:39 - undefined_method
+
+flutter : 339 issues found. (ran in 24.8s)
+At line:1 char:1
++ flutter analyze 2>&1 | Out-File -FilePath errors.txt -Encodi
+ng utf8
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (339 issues found 
+   . (ran in 24.8s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

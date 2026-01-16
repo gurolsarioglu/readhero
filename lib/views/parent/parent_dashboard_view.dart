@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../../controllers/student_controller.dart';
+import '../../controllers/auth_controller.dart';
 import '../../models/models.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/widgets.dart';
@@ -35,7 +36,10 @@ class _ParentDashboardViewState extends State<ParentDashboardView> {
     setState(() => _isLoading = true);
     
     final studentController = context.read<StudentController>();
-    await studentController.loadStudents();
+    final authController = context.read<AuthController>();
+    final userId = authController.currentUser?.id ?? '';
+    
+    await studentController.loadStudents(userId);
     
     if (studentController.students.isNotEmpty) {
       setState(() {

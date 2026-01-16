@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
   final Color? textColor;
   final double? width;
   final double? height;
+  final double? fontSize;
 
   const CustomButton({
     super.key,
@@ -24,6 +25,7 @@ class CustomButton extends StatelessWidget {
     this.textColor,
     this.width,
     this.height,
+    this.fontSize,
   });
 
   @override
@@ -70,6 +72,8 @@ class CustomButton extends StatelessWidget {
   }
 
   Widget _buildContent(Color color) {
+    final textStyle = fontSize != null ? TextStyle(fontSize: fontSize) : null;
+    
     if (isLoading) {
       return SizedBox(
         height: 20,
@@ -87,11 +91,11 @@ class CustomButton extends StatelessWidget {
         children: [
           Icon(icon, size: 20),
           const SizedBox(width: 8),
-          Text(text),
+          Text(text, style: textStyle),
         ],
       );
     }
 
-    return Text(text);
+    return Text(text, style: textStyle);
   }
 }

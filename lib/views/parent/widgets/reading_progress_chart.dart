@@ -39,9 +39,11 @@ class _ReadingProgressChartState extends State<ReadingProgressChart> {
     final days = int.parse(_selectedPeriod);
     final cutoffDate = DateTime.now().subtract(Duration(days: days));
     
+    final cutoffTimestamp = cutoffDate.millisecondsSinceEpoch;
+    
     setState(() {
       _sessions = allSessions
-          .where((s) => s.startTime.isAfter(cutoffDate))
+          .where((s) => s.startTime > cutoffTimestamp)
           .toList()
         ..sort((a, b) => a.startTime.compareTo(b.startTime));
       _isLoading = false;
@@ -138,16 +140,17 @@ class _ReadingProgressChartState extends State<ReadingProgressChart> {
     final Map<DateTime, List<double>> dailyWPM = {};
     
     for (var session in _sessions) {
+      final startDate = DateTime.fromMillisecondsSinceEpoch(session.startTime);
       final date = DateTime(
-        session.startTime.year,
-        session.startTime.month,
-        session.startTime.day,
+        startDate.year,
+        startDate.month,
+        startDate.day,
       );
       
       if (!dailyWPM.containsKey(date)) {
         dailyWPM[date] = [];
       }
-      dailyWPM[date]!.add(session.wpm);
+      dailyWPM[date]!.add(session.wpm ?? 0.0);
     }
 
     // Ortalama hesapla ve sırala
@@ -244,10 +247,11 @@ class _ReadingProgressChartState extends State<ReadingProgressChart> {
     final Map<DateTime, int> dailyBooks = {};
     
     for (var session in _sessions) {
+      final startDate = DateTime.fromMillisecondsSinceEpoch(session.startTime);
       final date = DateTime(
-        session.startTime.year,
-        session.startTime.month,
-        session.startTime.day,
+        startDate.year,
+        startDate.month,
+        startDate.day,
       );
       
       dailyBooks[date] = (dailyBooks[date] ?? 0) + 1;
@@ -334,13 +338,13 @@ class _ReadingProgressChartState extends State<ReadingProgressChart> {
     final totalSessions = _sessions.length;
     final avgWPM = _sessions.isEmpty
         ? 0.0
-        : _sessions.map((s) => s.wpm).reduce((a, b) => a + b) / totalSessions;
+        : _sessions.map((s) => s.wpm ?? 0.0).reduce((a, b) => a + b) / totalSessions;
     final totalMinutes = _sessions.isEmpty
         ? 0
         : _sessions
-            .map((s) => s.duration)
+            .map((s) => s.duration ?? 0)
             .reduce((a, b) => a + b)
-            .inMinutes;
+            ~/ 60;
 
     return Container(
       padding: const EdgeInsets.all(12),
