@@ -1,0 +1,99 @@
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+Running Gradle task 'assembleDebug'...                          
+lib/controllers/story_controller.dart:4:8: Error: Error when reading 'lib/services/ai_service.dart': Sistem belirtilen dosyayı bulamıyor
+import '../services/ai_service.dart';
+       ^
+lib/controllers/story_controller.dart:11:9: Error: Type 'AIService' not found.
+  final AIService _aiService = AIService();
+        ^^^^^^^^^
+lib/views/student/ai_test_view.dart:27:23: Error: The getter 'isInitialized' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isInitialized'.
+    if (!aiController.isInitialized) {
+                      ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:28:26: Error: The method 'initialize' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'initialize'.
+      await aiController.initialize();
+                         ^^^^^^^^^^
+lib/views/student/ai_test_view.dart:35:38: Error: The method 'generateStory' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'generateStory'.
+    final story = await aiController.generateStory(
+                                     ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:45:31: Error: The getter 'errorMessage' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'errorMessage'.
+      _showError(aiController.errorMessage ?? 'Hikaye oluşturulamadı');
+                              ^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:106:42: Error: The getter 'isInitialized' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isInitialized'.
+                            aiController.isInitialized
+                                         ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:109:49: Error: The getter 'isInitialized' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isInitialized'.
+                            color: aiController.isInitialized
+                                                ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:115:42: Error: The getter 'isInitialized' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isInitialized'.
+                            aiController.isInitialized
+                                         ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:190:44: Error: The getter 'categories' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'categories'.
+                    children: aiController.categories.map((category) {
+                                           ^^^^^^^^^^
+lib/views/student/ai_test_view.dart:232:45: Error: The getter 'isInitialized' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'isInitialized'.
+                    onPressed: aiController.isInitialized ? () => _generateStory() : null,
+                                            ^^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:332:36: Error: The getter 'errorMessage' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'errorMessage'.
+                  if (aiController.errorMessage != null) ...[
+                                   ^^^^^^^^^^^^
+lib/views/student/ai_test_view.dart:347:44: Error: The getter 'errorMessage' isn't defined for the type 'AIController'.
+ - 'AIController' is from 'package:readhero/controllers/ai_controller.dart' ('lib/controllers/ai_controller.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'errorMessage'.
+                              aiController.errorMessage!,
+                                           ^^^^^^^^^^^^
+lib/views/student/generate_story_view.dart:212:19: Error: No named parameter with the name 'fontSize'.
+                  fontSize: 18,
+                  ^^^^^^^^
+lib/core/widgets/custom_button.dart:16:9: Context: Found this candidate, but the arguments don't match.
+  const CustomButton({
+        ^^^^^^^^^^^^
+lib/controllers/story_controller.dart:11:9: Error: 'AIService' isn't a type.
+  final AIService _aiService = AIService();
+        ^^^^^^^^^
+lib/controllers/story_controller.dart:11:32: Error: Method not found: 'AIService'.
+  final AIService _aiService = AIService();
+                               ^^^^^^^^^
+lib/services/ai_all.dart:60:22: Error: Required named parameter 'wordCount' must be provided.
+    return StoryModel(
+                     ^
+lib/models/story_model.dart:20:3: Context: Found this candidate, but the arguments don't match.
+  StoryModel({
+  ^^^^^^^^^^
+Target kernel_snapshot_program failed: Exception
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildDebug'.
+> Process 'command 'C:\flutter\bin\flutter.bat'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s
+Running Gradle task 'assembleDebug'...                             11,1s
+Error: Gradle task assembleDebug failed with exit code 1

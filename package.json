@@ -1,0 +1,20 @@
+{
+  "name": "readhero-emulator-viewer",
+  "version": "1.0.0",
+  "description": "Web-based Android Emulator Viewer for ReadHero",
+  "main": "emulator_server.js",
+  "scripts": {
+    "start": "node emulator_server.js",
+    "dev": "nodemon emulator_server.js"
+  },
+  "keywords": ["android", "emulator", "viewer", "readhero"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "stories": [
+    {
+      "id": "story_1_1",
+      "title": "Küçük Kedi Minnos",
+      "content": "Bir zamanlar Minnos adında küçük bir kedi varmış. Minnos çok oyuncu bir kediymiş. Her gün bahçede oyun oynarmış.\n\nBir gün Minnos bahçede bir kelebek görmüş. Kelebek çok güzelmiş. Minnos kelebeğin peşinden koşmuş. Kelebek uçmuş, Minnos zıplamış.\n\nKelebek bir çiçeğe konmuş. Minnos yavaşça yaklaşmış. Ama kelebek tekrar uçmuş. Minnos üzülmüş.\n\nSonra Minnos'un annesi gelmiş. \"Kelebekler özgürdür Minnos\" demiş. \"Onları izlemek daha güzel.\"\n\nMinnos annesinin sözünü dinlemiş. Artık kelebekleri sadece izliyormuş. Çok mutluymuş.",
+      "category": "Hayvanlar",
+      "gradeLevel": 1,
+      "wordCount": 89,
+      "difficulty": "easy",
+      "keywords": ["kedi", "kelebek", "bahçe", "özgürlük"],
+      "moralLesson": "Canlılara zarar vermeden onları izlemek daha güzeldir.",
+      "isOffline": true,
+      "isAiGenerated": false,
+      "source": "builtin",
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "story_1_2",
+      "title": "Paylaşmayı Öğrenen Ayı",
+      "content": "Ormanda Boncuk adında bir ayı yaşarmış. Boncuk çok açgözlü bir ayıymış. Hiçbir şeyini paylaşmazmış.\n\nBir gün Boncuk ormanda çok fazla bal bulmuş. Tüm balı kendisi yemiş. Arkadaşlarına vermemiş.\n\nErtesi gün Boncuk hastalanmış. Karnı çok ağrıyormuş. Çok üzülmüş.\n\nArkadaşları Boncuk'u ziyaret etmiş. Ona meyve getirmişler. Boncuk çok utanmış.\n\n\"Özür dilerim\" demiş Boncuk. \"Balı sizinle paylaşmalıydım.\"\n\nArkadaşları Boncuk'u affetmiş. Boncuk o günden sonra her şeyini paylaşmış. Çok mutlu olmuş.",
+      "category": "Dostluk",
+      "gradeLevel": 1,
+      "wordCount": 82,
+      "difficulty": "easy",
+      "keywords": ["ayı", "paylaşmak", "dostluk", "bal"],
+      "moralLesson": "Paylaşmak mutluluk getirir.",
+      "isOffline": true,
+      "isAiGenerated": false,
+      "source": "builtin",
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "story_1_3",
+      "title": "Cesur Tavşan",
+      "content": "Orman'da Pamuk adında küçük bir tavşan varmış. Pamuk çok korkak bir tavşanmış. Her şeyden korkarmış.\n\nBir gün ormanda yangın çıkmış. Tüm hayvanlar korkmuş. Kimse ne yapacağını bilememiş.\n\nPamuk nehri görmüş. \"Hemen nehirden su taşıyalım!\" demiş. Tüm hayvanlar Pamuk'u dinlemiş.\n\nHep birlikte su taşımışlar. Yangını söndürmüşler. Ormanı kurtarmışlar.\n\nHayvanlar Pamuk'a teşekkür etmiş. \"Sen çok cesaretlisin\" demişler.\n\nPamuk artık kendine güveniyormuş. Korkak değilmiş, cesurmuş!",
+      "category": "Macera",
+      "gradeLevel": 1,
+      "wordCount": 76,
+      "difficulty": "easy",
+      "keywords": ["tavşan", "cesaret", "yangın", "orman"],
+      "moralLesson": "Zor zamanlarda cesur olmak önemlidir.",
+      "isOffline": true,
+      "isAiGenerated": false,
+      "source": "builtin",
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "story_1_4",
+      "title": "Yardımsever Karınca",
+      "content": "Bahçede Çalışkan adında bir karınca yaşarmış. Her gün çok çalışırmış.\n\nBir gün yağmur yağmış. Bir çekirge ıslanmış. Çok üşümüş.\n\nÇekirge Çalışkan'a gelmiş. \"Yardım eder misin?\" demiş.\n\nÇalışkan hemen yardım etmiş. Çekirgeyi yuvasına almış. Ona yemek vermiş.\n\nYağmur durmuş. Çekirge çok mutlu olmuş. \"Teşekkür ederim\" demiş.\n\n\"Rica ederim\" demiş Çalışkan. \"Arkadaşlar birbirine yardım eder.\"\n\nO günden sonra çekirge de çalışkan olmuş. İkisi en iyi arkadaş olmuş.",
+      "category": "Dostluk",
+      "gradeLevel": 1,
+      "wordCount": 79,
+      "difficulty": "easy",
+      "keywords": ["karınca", "çekirge", "yardım", "dostluk"],
+      "moralLesson": "Birbirimize yardım etmeliyiz.",
+      "isOffline": true,
+      "isAiGenerated": false,
+      "source": "builtin",
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "story_1_5",
+      "title": "Renkli Kuş",
+      "content": "Gökyüzünde Renk adında güzel bir kuş varmış. Renk çok renkli tüylere sahipmiş.\n\nBir gün Renk diğer kuşları görmüş. Onlar gri renkteymişler. Renk farklı olduğu için üzülmüş.\n\n\"Keşke ben de gri olsaydım\" demiş Renk.\n\nYaşlı bir baykuş Renk'i duymuş. \"Neden üzülüyorsun?\" diye sormuş.\n\n\"Farklıyım\" demiş Renk.\n\n\"Farklı olmak güzeldir\" demiş baykuş. \"Sen özelsin. Gökyüzünü güzelleştiriyorsun.\"\n\nRenk anlamış. Farklı olmak kötü değilmiş. Artık mutluymuş. Gökyüzünde gururla uçuyormuş.",
+      "category": "Aile",
+      "gradeLevel": 1,
+      "wordCount": 81,
+      "difficulty": "easy",
+      "keywords": ["kuş", "farklılık", "renk", "özgüven"],
+      "moralLesson": "Farklı olmak güzeldir, herkes özeldir.",
+      "isOffline": true,
+      "isAiGenerated": false,
+      "source": "builtin",
+      "createdAt": 1705233600000
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "quiz_1_1",
+      "storyId": "story_1_1",
+      "questions": [
+        {
+          "question": "Kedinin adı neydi?",
+          "options": ["Minnos", "Pamuk", "Boncuk"],
+          "correctAnswer": 0,
+          "explanation": "Hikayedeki kedinin adı Minnos'tu."
+        },
+        {
+          "question": "Minnos bahçede ne gördü?",
+          "options": ["Bir kuş", "Bir kelebek", "Bir fare"],
+          "correctAnswer": 1,
+          "explanation": "Minnos bahçede güzel bir kelebek gördü."
+        },
+        {
+          "question": "Minnos'un annesi ne dedi?",
+          "options": ["Kelebekler özgürdür", "Kelebekler uçar", "Kelebekler güzeldir"],
+          "correctAnswer": 0,
+          "explanation": "Annesi 'Kelebekler özgürdür' dedi."
+        },
+        {
+          "question": "Minnos sonunda ne yaptı?",
+          "options": ["Kelebeği yakaladı", "Kelebeği izledi", "Eve gitti"],
+          "correctAnswer": 1,
+          "explanation": "Minnos kelebekleri sadece izlemeye başladı."
+        },
+        {
+          "question": "Hikayenin konusu neydi?",
+          "options": ["Oyun oynamak", "Canlılara saygı", "Bahçe"],
+          "correctAnswer": 1,
+          "explanation": "Hikaye canlılara saygı göstermeyi anlatıyordu."
+        }
+      ],
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "quiz_1_2",
+      "storyId": "story_1_2",
+      "questions": [
+        {
+          "question": "Ayının adı neydi?",
+          "options": ["Minnos", "Boncuk", "Pamuk"],
+          "correctAnswer": 1,
+          "explanation": "Ayının adı Boncuk'tu."
+        },
+        {
+          "question": "Boncuk ne buldu?",
+          "options": ["Meyve", "Bal", "Su"],
+          "correctAnswer": 1,
+          "explanation": "Boncuk ormanda çok fazla bal buldu."
+        },
+        {
+          "question": "Boncuk neden hastalandı?",
+          "options": ["Çok koştu", "Çok bal yedi", "Üşüdü"],
+          "correctAnswer": 1,
+          "explanation": "Boncuk tüm balı kendisi yediği için hastalandı."
+        },
+        {
+          "question": "Arkadaşları Boncuk'a ne getirdi?",
+          "options": ["Bal", "Meyve", "Su"],
+          "correctAnswer": 1,
+          "explanation": "Arkadaşları Boncuk'a meyve getirdiler."
+        },
+        {
+          "question": "Hikayeden ne öğrendik?",
+          "options": ["Bal yemek", "Paylaşmak", "Koşmak"],
+          "correctAnswer": 1,
+          "explanation": "Hikayeden paylaşmanın önemini öğrendik."
+        }
+      ],
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "quiz_1_3",
+      "storyId": "story_1_3",
+      "questions": [
+        {
+          "question": "Tavşanın adı neydi?",
+          "options": ["Pamuk", "Boncuk", "Renk"],
+          "correctAnswer": 0,
+          "explanation": "Tavşanın adı Pamuk'tu."
+        },
+        {
+          "question": "Ormanda ne oldu?",
+          "options": ["Yağmur yağdı", "Yangın çıktı", "Kar yağdı"],
+          "correctAnswer": 1,
+          "explanation": "Ormanda yangın çıktı."
+        },
+        {
+          "question": "Pamuk ne önerdi?",
+          "options": ["Kaçmak", "Su taşımak", "Beklemek"],
+          "correctAnswer": 1,
+          "explanation": "Pamuk nehirden su taşımayı önerdi."
+        },
+        {
+          "question": "Hayvanlar ne yaptı?",
+          "options": ["Kaçtı", "Uyudu", "Birlikte çalıştı"],
+          "correctAnswer": 2,
+          "explanation": "Hayvanlar hep birlikte su taşıdı."
+        },
+        {
+          "question": "Pamuk nasıl biriydi?",
+          "options": ["Korkak", "Cesur", "Tembel"],
+          "correctAnswer": 1,
+          "explanation": "Pamuk aslında cesur bir tavşandı."
+        }
+      ],
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "quiz_1_4",
+      "storyId": "story_1_4",
+      "questions": [
+        {
+          "question": "Karıncanın adı neydi?",
+          "options": ["Çalışkan", "Tembel", "Hızlı"],
+          "correctAnswer": 0,
+          "explanation": "Karıncanın adı Çalışkan'dı."
+        },
+        {
+          "question": "Çekirge neden yardım istedi?",
+          "options": ["Acıktı", "Islandı", "Yoruldu"],
+          "correctAnswer": 1,
+          "explanation": "Çekirge yağmurda ıslandığı için yardım istedi."
+        },
+        {
+          "question": "Çalışkan ne yaptı?",
+          "options": ["Kaçtı", "Yardım etti", "Uyudu"],
+          "correctAnswer": 1,
+          "explanation": "Çalışkan hemen yardım etti."
+        },
+        {
+          "question": "Çalışkan çekirgeye ne verdi?",
+          "options": ["Para", "Yemek", "Oyuncak"],
+          "correctAnswer": 1,
+          "explanation": "Çalışkan çekirgeye yemek verdi."
+        },
+        {
+          "question": "Hikayenin mesajı neydi?",
+          "options": ["Çalışmak", "Yardımlaşmak", "Oynamak"],
+          "correctAnswer": 1,
+          "explanation": "Hikaye yardımlaşmanın önemini anlattı."
+        }
+      ],
+      "createdAt": 1705233600000
+    },
+    {
+      "id": "quiz_1_5",
+      "storyId": "story_1_5",
+      "questions": [
+        {
+          "question": "Kuşun adı neydi?",
+          "options": ["Renk", "Pamuk", "Minnos"],
+          "correctAnswer": 0,
+          "explanation": "Kuşun adı Renk'ti."
+        },
+        {
+          "question": "Renk nasıl görünüyordu?",
+          "options": ["Gri", "Renkli", "Beyaz"],
+          "correctAnswer": 1,
+          "explanation": "Renk çok renkli tüylere sahipti."
+        },
+        {
+          "question": "Renk neden üzüldü?",
+          "options": ["Yoruldu", "Farklıydı", "Acıktı"],
+          "correctAnswer": 1,
+          "explanation": "Renk diğer kuşlardan farklı olduğu için üzüldü."
+        },
+        {
+          "question": "Baykuş ne dedi?",
+          "options": ["Farklı olmak güzeldir", "Uç git", "Uyumak lazım"],
+          "correctAnswer": 0,
+          "explanation": "Baykuş 'Farklı olmak güzeldir' dedi."
+        },
+        {
+          "question": "Renk sonunda nasıl hissetti?",
+          "options": ["Üzgün", "Mutlu", "Kızgın"],
+          "correctAnswer": 1,
+          "explanation": "Renk artık mutlu ve gururluydu."
+        }
+      ],
+      "createdAt": 1705233600000
+    }
+  ]
+}

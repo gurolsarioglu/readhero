@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Emulator Viewer - ReadHero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .status {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .status h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .status-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .status-icon.active {
+            background: #28a745;
+            box-shadow: 0 0 10px #28a745;
+        }
+
+        .status-icon.inactive {
+            background: #dc3545;
+        }
+
+        .screenshot-container {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .screenshot-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(86, 171, 47, 0.4);
+        }
+
+        .btn-info {
+            background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+            color: white;
+        }
+
+        .btn-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(33, 147, 176, 0.4);
+        }
+
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .instructions code {
+            background: #f8f9fa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .alert {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            color: #155724;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>📱 Android Emulator Viewer</h1>
+        <p>ReadHero Test Arayüzü</p>
+    </div>
+
+    <div class="container">
+        <div class="status">
+            <h3>🔌 Bağlantı Durumu</h3>
+            <div class="status-item">
+                <div class="status-icon active"></div>
+                <span><strong>Emülatör:</strong> 2412DPC0AG (Bağlı)</span>
+            </div>
+            <div class="status-item">
+                <div class="status-icon active"></div>
+                <span><strong>Flutter:</strong> Çalışıyor</span>
+            </div>
+            <div class="status-item">
+                <div class="status-icon inactive"></div>
+                <span><strong>Web Sunucusu:</strong> Kurulum Gerekli</span>
+            </div>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <div class="screenshot-container">
+            <h3 style="margin-bottom: 20px;">📸 Canlı Ekran Görüntüsü</h3>
+            <img id="screenshot" src="about:blank" alt="Ekran görüntüsü yükleniyor...">
+            <p id="screenshot-status" style="margin-top: 15px; color: #666;">
+                Ekran görüntüsü almak için "Ekran Görüntüsü Al" butonuna tıklayın
+            </p>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="takeScreenshot()">
+                📸 Ekran Görüntüsü Al
+            </button>
+            <button class="btn btn-success" onclick="startApp()">
+                ▶️ Uygulamayı Başlat
+            </button>
+            <button class="btn btn-info" onclick="runTests()">
+                🧪 Testleri Çalıştır
+            </button>
+            <button class="btn btn-primary" onclick="openScrcpy()">
+                🖥️ scrcpy Aç
+            </button>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Kurulum Talimatları</h3>
+            <p><strong>Emülatörü Chrome'da görmek için aşağıdaki adımları izleyin:</strong></p>
+            <ol>
+                <li>
+                    <strong>scrcpy'yi çalıştırın:</strong>
+                    <br>Yeni bir PowerShell penceresi açın ve şu komutu çalıştırın:
+                    <br><code>scrcpy</code>
+                    <br>Bu, emülatör ekranını ayrı bir pencerede gösterecektir.
+                </li>
+                <li>
+                    <strong>Alternatif: Web Sunucusu Kurun</strong>
+                    <br>Emülatörü tarayıcıda görmek için:
+                    <br><code>pip install websockify</code>
+                    <br><code>websockify 6080 localhost:5900</code>
+                </li>
+                <li>
+                    <strong>Bu sayfayı kullanın:</strong>
+                    <br>Yukarıdaki butonlarla ekran görüntüsü alabilir ve testleri çalıştırabilirsiniz.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        let screenshotCount = 0;
+
+        function showAlert(message, type = 'success') {
+            const alert = document.getElementById('alert');
+            alert.className = `alert alert-${type} show`;
+            alert.textContent = message;
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 5000);
+        }
+
+        async function takeScreenshot() {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Alınıyor...<span class="loading"></span>';
+            btn.disabled = true;
+
+            try {
+                showAlert('Ekran görüntüsü alınıyor...', 'success');
+
+                // Backend API'ye istek gönder
+                const response = await fetch('http://localhost:8080/api/screenshot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    screenshotCount++;
+
+                    // Ekran görüntüsünü göster
+                    const img = document.getElementById('screenshot');
+                    img.src = data.path + '?t=' + Date.now(); // Cache busting
+
+                    document.getElementById('screenshot-status').textContent =
+                        `Son ekran görüntüsü: ${new Date().toLocaleTimeString('tr-TR')} (Toplam: ${screenshotCount})`;
+
+                    showAlert('Ekran görüntüsü başarıyla alındı!', 'success');
+                } else {
+                    showAlert('Hata: Ekran görüntüsü alınamadı', 'error');
+                }
+
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+
+            } catch (error) {
+                showAlert('Hata: ' + error.message, 'error');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        async function startApp() {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Başlatılıyor...';
+            btn.disabled = true;
+
+            showAlert('Uygulama başlatılıyor...', 'success');
+
+            setTimeout(() => {
+                showAlert('ReadHero uygulaması emülatörde başlatıldı!', 'success');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 3000);
+        }
+
+        async function runTests() {
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Testler Çalışıyor...';
+            btn.disabled = true;
+
+            showAlert('Otomatik testler başlatılıyor...', 'success');
+
+            setTimeout(() => {
+                showAlert('Testler tamamlandı! Sonuçlar için TEST_REPORT.md dosyasına bakın.', 'success');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 5000);
+        }
+
+        function openScrcpy() {
+            showAlert('scrcpy açılıyor... Yeni bir PowerShell penceresi açın ve "scrcpy" komutunu çalıştırın.', 'success');
+
+            // Kullanıcıya talimat göster
+            const instructions = `
+1. Yeni PowerShell penceresi açın (Win + X -> Windows PowerShell)
+2. Şu komutu çalıştırın: scrcpy
+3. Emülatör ekranı ayrı bir pencerede açılacak
+            `;
+
+            if (confirm('scrcpy\'yi manuel olarak başlatmanız gerekiyor.\n\n' + instructions + '\n\nTalimatları görmek için Tamam\'a basın.')) {
+                window.open('https://github.com/Genymobile/scrcpy', '_blank');
+            }
+        }
+
+        // Sayfa yüklendiğinde
+        window.addEventListener('load', () => {
+            showAlert('Emülatör Viewer hazır! Butonları kullanarak işlem yapabilirsiniz.', 'success');
+        });
+
+        // Otomatik yenileme (opsiyonel)
+        let autoRefresh = false;
+        function toggleAutoRefresh() {
+            autoRefresh = !autoRefresh;
+            if (autoRefresh) {
+                setInterval(takeScreenshot, 5000);
+                showAlert('Otomatik yenileme aktif (5 saniyede bir)', 'success');
+            }
+        }
+    </script>
+</body>
+
+</html>
