@@ -64,13 +64,13 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
           break;
         case 'duration':
           _sessions.sort((a, b) => _ascending
-              ? a.duration.compareTo(b.duration)
-              : b.duration.compareTo(a.duration));
+              ? (a.duration ?? 0).compareTo(b.duration ?? 0)
+              : (b.duration ?? 0).compareTo(a.duration ?? 0));
           break;
         case 'wpm':
           _sessions.sort((a, b) => _ascending
-              ? a.wpm.compareTo(b.wpm)
-              : b.wpm.compareTo(a.wpm));
+              ? (a.wpm ?? 0).compareTo(b.wpm ?? 0)
+              : (b.wpm ?? 0).compareTo(a.wpm ?? 0));
           break;
       }
     });
@@ -227,11 +227,11 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
   Widget _buildSummaryHeader() {
     final totalSessions = _sessions.length;
     final totalMinutes = _sessions
-        .map((s) => s.duration.inMinutes)
+        .map((s) => (s.duration ?? 0) ~/ 60)
         .fold(0, (a, b) => a + b);
     final avgWPM = _sessions.isEmpty
         ? 0.0
-        : _sessions.map((s) => s.wpm).reduce((a, b) => a + b) / totalSessions;
+        : _sessions.map((s) => s.wpm ?? 0.0).reduce((a, b) => a + b) / totalSessions;
 
     return Container(
       margin: const EdgeInsets.all(16),
@@ -354,7 +354,7 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
                   ),
                   const SizedBox(width: 6),
                   Text(
-                    dateFormat.format(session.startTime),
+                    dateFormat.format(DateTime.fromMillisecondsSinceEpoch(session.startTime)),
                     style: AppTheme.captionStyle,
                   ),
                 ],
@@ -368,7 +368,7 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
                     AppTheme.primaryColor,
                   ),
                   const SizedBox(width: 12),
-                  if (session.wpm > 0)
+                  if ((session.wpm ?? 0) > 0)
                     _buildInfoChip(
                       Icons.speed,
                       session.formattedWPM,
@@ -377,7 +377,7 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
                   const SizedBox(width: 12),
                   _buildInfoChip(
                     Icons.check_circle_outline,
-                    '${(session.completionRate * 100).toStringAsFixed(0)}%',
+                    '${(session.completionRate).toStringAsFixed(0)}%',
                     AppTheme.accentColor,
                   ),
                 ],
@@ -423,13 +423,13 @@ class _ReadingHistoryViewState extends State<ReadingHistoryView> {
                 style: AppTheme.headlineStyle,
               ),
               const SizedBox(height: 24),
-              _buildDetailRow('Başlangıç', DateFormat('HH:mm').format(session.startTime)),
-              _buildDetailRow('Bitiş', session.endTime != null ? DateFormat('HH:mm').format(session.endTime!) : '-'),
+              _buildDetailRow('Başlangıç', DateFormat('HH:mm').format(DateTime.fromMillisecondsSinceEpoch(session.startTime))),
+              _buildDetailRow('Bitiş', session.endTime != null ? DateFormat('HH:mm').format(DateTime.fromMillisecondsSinceEpoch(session.endTime!)) : '-'),
               _buildDetailRow('Süre', session.formattedDuration),
               _buildDetailRow('Kelime Sayısı', session.wordCount.toString()),
-              if (session.wpm > 0)
+              if ((session.wpm ?? 0) > 0)
                 _buildDetailRow('Okuma Hızı', session.formattedWPM),
-              _buildDetailRow('Tamamlanma', '${(session.completionRate * 100).toStringAsFixed(0)}%'),
+              _buildDetailRow('Tamamlanma', '${(session.completionRate).toStringAsFixed(0)}%'),
               const SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,

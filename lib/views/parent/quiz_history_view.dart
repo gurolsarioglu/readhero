@@ -354,7 +354,7 @@ class _QuizHistoryViewState extends State<QuizHistoryView> {
                   ),
                   const SizedBox(width: 6),
                   Text(
-                    dateFormat.format(result.completedAt),
+                    dateFormat.format(DateTime.fromMillisecondsSinceEpoch(result.completedAt)),
                     style: AppTheme.captionStyle,
                   ),
                 ],
@@ -481,7 +481,7 @@ class _QuizHistoryViewState extends State<QuizHistoryView> {
                   _buildDetailRow('Başarı Oranı', result.formattedScore),
                   _buildDetailRow('Not', result.grade),
                   _buildDetailRow('Durum', result.isPassed ? 'Başarılı ✓' : 'Başarısız ✗'),
-                  _buildDetailRow('Tarih', DateFormat('dd MMMM yyyy, HH:mm', 'tr_TR').format(result.completedAt)),
+                  _buildDetailRow('Tarih', DateFormat('dd MMMM yyyy, HH:mm', 'tr_TR').format(DateTime.fromMillisecondsSinceEpoch(result.completedAt))),
                   const SizedBox(height: 24),
                   if (result.isPerfect)
                     Container(

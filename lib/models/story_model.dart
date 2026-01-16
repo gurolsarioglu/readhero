@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ui';
 
 /// Hikaye modeli
 class StoryModel {
@@ -119,6 +120,20 @@ class StoryModel {
   int get estimatedReadingTime {
     final avgWPM = 40 + (gradeLevel * 20);
     return (wordCount / avgWPM).ceil();
+  }
+  
+  /// Zorluk seviyesine göre renk döndür
+  Color get difficultyColor {
+    switch (difficulty.toLowerCase()) {
+      case 'easy':
+      case 'kolay':
+        return const Color(0xFF4CAF50); // Green
+      case 'hard':
+      case 'zor':
+        return const Color(0xFFF44336); // Red
+      default: // medium, orta
+        return const Color(0xFFFF9800); // Orange
+    }
   }
 
   @override

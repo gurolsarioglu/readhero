@@ -15,6 +15,13 @@ class QuizResultModel {
 
   bool get isPassed => score >= 60;
   bool get isPerfect => score >= 100;
+  
+  /// Formatlanmış puan (örn: "85%")
+  String get formattedScore {
+    if (totalQuestions == 0) return '0%';
+    final percentage = (correctCount / totalQuestions) * 100;
+    return '${percentage.toStringAsFixed(0)}%';
+  }
 
   QuizResultModel({
     this.id = '',
