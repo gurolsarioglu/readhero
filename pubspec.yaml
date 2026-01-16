@@ -23,8 +23,8 @@ dependencies:
   path_provider: ^2.1.1
   path: ^1.8.3
   
-  # Local Storage
-  shared_preferences: ^2.2.2
+  # AI Integration
+  google_generative_ai: any
   
   # Charts & Graphs
   fl_chart: ^0.66.0
