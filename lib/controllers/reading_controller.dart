@@ -125,6 +125,9 @@ class ReadingController extends ChangeNotifier {
       _stopTimer();
       _calculateWPM();
       
+      // Okuma oturumunu kaydet (ÖNCE KAYDET!)
+      await _saveReadingSession();
+      
       // Hedefleri güncelle
       try {
         final goalService = GoalService.instance;
@@ -134,8 +137,8 @@ class ReadingController extends ChangeNotifier {
         debugPrint('⚠️ Hedef güncelleme hatası: $e');
       }
 
-      // State'i temizle
-      _resetState();
+      // NOT: State'i HEMEN TEMİZLEME! Quiz için session'a ihtiyacımız var
+      // _resetState() reading_view.dart'da quiz navigation'dan sonra çağrılacak
       
       return true;
     } catch (e) {

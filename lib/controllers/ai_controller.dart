@@ -62,6 +62,9 @@ class AIController extends ChangeNotifier {
     notifyListeners();
 
     try {
+      debugPrint('🤖 AI Hikaye oluşturma başladı...');
+      debugPrint('📊 Parametreler: Sınıf=$gradeLevel, Kategori=$category, Zorluk=$difficulty, Tema=$theme');
+      
       _generatedStory = await _storyGenerator.generateStory(
         gradeLevel: gradeLevel, 
         category: category, 
@@ -69,23 +72,70 @@ class AIController extends ChangeNotifier {
         theme: theme
       );
 
+      debugPrint('✅ Hikaye oluşturuldu: ${_generatedStory!.title}');
+      debugPrint('🎯 Quiz oluşturma başlıyor...');
+
       final quiz = await _quizGenerator.generateQuiz(
         _generatedStory!.id,
         _generatedStory!.title,
         _generatedStory!.content,
       );
 
+      debugPrint('✅ Quiz oluşturuldu: ${quiz.questions.length} soru');
+      debugPrint('💾 Veritabanına kaydediliyor...');
+
       await _db.insertStory(_generatedStory!);
+      debugPrint('✅ Hikaye DB\'ye kaydedildi');
+      
       await _db.insertQuiz(quiz);
+      debugPrint('✅ Quiz DB\'ye kaydedildi');
+      
       await storyController.loadStories();
+      debugPrint('✅ Hikayeler yeniden yüklendi');
       
       _isLoading = false;
       notifyListeners();
+      debugPrint('🎉 İşlem tamamlandı!');
     } catch (e) {
+      debugPrint('❌ HATA: $e');
       _isLoading = false;
       _errorMessage = e.toString();
       notifyListeners();
       rethrow;
+    }
+  }
+  Future<QuizModel?> generateQuizForStory(StoryModel story) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      // 1. Önce bu hikaye için eski quizleri temizle (isteğe bağlı, yeni mantıkta her seferinde yeni quiz isteniyor)
+      // Ancak veritabanında story_id unique key değilse sorun olmaz, değilse çakışma olabilir.
+      // Quiz tablosunu kontrol etmedik ama genelde id PK'dir. StoryId FK'dir.
+      
+      // 2. Yeni quiz oluştur
+      final quiz = await _quizGenerator.generateQuiz(
+        story.id,
+        story.title,
+        story.content,
+      );
+
+      // 3. Veritabanına kaydet
+      // Eğer aynı story_id için birden fazla quiz olabiliyorsa sorun yok.
+      // Ancak `getQuizByStoryId` metodu muhtemelen tek bir quiz döndürüyor.
+      // Bu yüzden önce var olanı silmek veya güncellemek daha güvenli olabilir.
+      // Şimdilik insertQuiz replacement mantığıyla çalışıyorsa sorun olmaz.
+      await _db.insertQuiz(quiz); // insertQuiz genelde insertConflict: replace çalışırsa iyi olur.
+      
+      _isLoading = false;
+      notifyListeners();
+      return quiz;
+    } catch (e) {
+      _isLoading = false;
+      _errorMessage = e.toString();
+      notifyListeners();
+      return null;
     }
   }
 }

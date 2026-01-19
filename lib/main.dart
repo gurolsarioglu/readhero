@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'core/theme/app_theme.dart';
@@ -21,6 +22,7 @@ import 'views/student/quiz_view.dart';
 import 'views/student/quiz_result_view.dart';
 import 'views/student/rewards_showcase_view.dart';
 import 'views/student/ai_test_view.dart';
+import 'views/student/generate_story_view.dart';
 import 'views/parent/rewards_view.dart';
 
 Future<void> main() async {
@@ -52,6 +54,19 @@ class ReadHeroApp extends StatelessWidget {
         title: AppStrings.appName,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
+        
+        // ✅ Türkçe Dil Desteği
+        locale: const Locale('tr', 'TR'),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('tr', 'TR'), // Türkçe
+          Locale('en', 'US'), // İngilizce (fallback)
+        ],
+        
         initialRoute: AppRoutes.splash,
         routes: {
           AppRoutes.splash: (context) => const SplashView(),
@@ -67,6 +82,7 @@ class ReadHeroApp extends StatelessWidget {
           AppRoutes.rewardsShowcase: (context) => const RewardsShowcaseView(),
           AppRoutes.rewardManagement: (context) => const RewardsView(),
           AppRoutes.aiTest: (context) => const AITestView(),
+          AppRoutes.generateStory: (context) => const GenerateStoryView(),
         },
         onGenerateRoute: (settings) {
           if (settings.name == AppRoutes.quizIntro) {

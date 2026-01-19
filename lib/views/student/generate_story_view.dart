@@ -15,8 +15,18 @@ class GenerateStoryView extends StatefulWidget {
 class _GenerateStoryViewState extends State<GenerateStoryView> {
   int _selectedGrade = 1;
   String _selectedCategory = StoryGenerator.categories[0];
-  String _selectedDifficulty = StoryGenerator.difficulties[1]; // orta
+  String _selectedDifficulty = 'orta'; // Türkçe UI için
   final TextEditingController _themeController = TextEditingController();
+
+  // Zorluk seviyesi mapping (Türkçe -> İngilizce)
+  final Map<String, String> _difficultyMap = {
+    'kolay': 'easy',
+    'orta': 'medium',
+    'zor': 'hard',
+  };
+
+  // UI'da gösterilecek Türkçe zorluk seviyeleri
+  final List<String> _difficultyLabels = ['kolay', 'orta', 'zor'];
 
   @override
   void initState() {
@@ -43,10 +53,13 @@ class _GenerateStoryViewState extends State<GenerateStoryView> {
     final storyController = context.read<StoryController>();
 
     try {
+      // Türkçe zorluk seviyesini İngilizce'ye çevir
+      final englishDifficulty = _difficultyMap[_selectedDifficulty] ?? 'medium';
+      
       await aiController.generateFullContent(
         gradeLevel: _selectedGrade,
         category: _selectedCategory,
-        difficulty: _selectedDifficulty,
+        difficulty: englishDifficulty, // İngilizce zorluk kullan
         theme: _themeController.text.isNotEmpty ? _themeController.text : null,
         storyController: storyController,
       );
@@ -186,7 +199,7 @@ class _GenerateStoryViewState extends State<GenerateStoryView> {
                 const Text('Zorluk Seviyesi', style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 12),
                 Row(
-                  children: StoryGenerator.difficulties.map((diff) {
+                  children: _difficultyLabels.map((diff) {
                     final isSelected = _selectedDifficulty == diff;
                     return Expanded(
                       child: Padding(

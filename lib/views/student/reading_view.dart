@@ -130,6 +130,7 @@ class _ReadingViewState extends State<ReadingView> {
     );
 
     if (confirmed == true && mounted) {
+      // Okuma oturumunu bitir
       final success = await controller.finishReading();
       
       if (success && mounted) {
@@ -137,16 +138,60 @@ class _ReadingViewState extends State<ReadingView> {
         final story = controller.currentStory;
         
         if (session != null && story != null) {
-          // Navigate to quiz
-          Navigator.pushReplacementNamed(
-            context,
-            '/quiz-intro',
-            arguments: {
-              'storyId': story.id,
-              'storyTitle': story.title,
-              'sessionId': session.id,
-            },
+          // AI ile Quiz Oluştur (Yükleniyor göster)
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (context) => const Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  LoadingIndicator(),
+                  SizedBox(height: 16),
+                  Text(
+                    'Sınav Hazırlanıyor...',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
           );
+
+          try {
+            // Quiz oluştur
+            final aiController = context.read<AIController>();
+            // AI hazir degilse baslat
+            if (!aiController.isInitialized) {
+              await aiController.initialize();
+            }
+            
+            await aiController.generateQuizForStory(story);
+            
+            if (mounted) {
+              Navigator.pop(context); // Loading'i kapat
+              
+              // State'i temizle (artık session kullanıldı)
+              controller.cancelReading();
+              
+              // Navigate to quiz intro
+              Navigator.pushReplacementNamed(
+                context,
+                '/quiz-intro',
+                arguments: {
+                  'storyId': story.id,
+                  'storyTitle': story.title,
+                  'sessionId': session.id,
+                },
+              );
+            }
+          } catch (e) {
+            if (mounted) {
+              Navigator.pop(context); // Loading'i kapat
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Sınav oluşturulurken hata: $e')),
+              );
+            }
+          }
         }
       }
     }

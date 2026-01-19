@@ -146,6 +146,7 @@ class _AddStudentViewState extends State<AddStudentView> {
                       hint: 'Ahmet',
                       prefixIcon: Icons.person_outline,
                       textInputAction: TextInputAction.done,
+                      autofillHints: const [AutofillHints.name],
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'İsim gerekli';

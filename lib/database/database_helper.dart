@@ -1,5 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:flutter/foundation.dart';
 import '../models/models.dart';
 
 /// SQLite veritabanı yöneticisi
@@ -262,6 +263,133 @@ class DatabaseHelper {
     await db.execute('CREATE INDEX idx_words_student ON difficult_words(student_id)');
     await db.execute('CREATE INDEX idx_words_story ON difficult_words(story_id)');
     await db.execute('CREATE INDEX idx_words_learned ON difficult_words(is_learned)');
+    
+    // ✅ DEMO HİKAYELER EKLE (Hemen test için hazır içerik)
+    debugPrint('📚 Demo hikayeler yükleniyor...');
+    await _insertDemoStories(db);
+    debugPrint('✅ Demo hikayeler yüklendi!');
+  }
+  
+  /// Demo hikayeleri veritabanına ekle
+  Future<void> _insertDemoStories(Database db) async {
+    final now = DateTime.now().millisecondsSinceEpoch;
+    
+    // 1. Sınıf Hikayeleri
+    await db.insert('stories', {
+      'id': 'demo_story_1',
+      'title': 'Cesur Tavşan',
+      'content': '''Orman'da Pamuk adında küçük bir tavşan varmış. Pamuk çok korkak bir tavşanmış. Her şeyden korkarmış.
+
+Bir gün ormanda yangın çıkmış. Tüm hayvanlar korkmuş. Kimse ne yapacağını bilememiş.
+
+Pamuk nehri görmüş. "Hemen nehirden su taşıyalım!" demiş. Tüm hayvanlar Pamuk'u dinlemiş.
+
+Hep birlikte su taşımışlar. Yangını söndürmüşler. Ormanı kurtarmışlar.
+
+Hayvanlar Pamuk'a çok teşekkür etmiş. "Sen çok cesaretlisin!" demişler.
+
+Pamuk artık kendine güveniyormuş. Korkularını yenmiş.''',
+      'category': 'Hayvanlar',
+      'grade_level': 1,
+      'word_count': 76,
+      'difficulty': 'easy',
+      'keywords': '["cesaret","hayvanlar","orman","dostluk"]',
+      'moral_lesson': 'Korkularımızı yenebiliriz.',
+      'is_offline': 1,
+      'is_ai_generated': 0,
+      'source': 'builtin',
+      'created_at': now,
+      'updated_at': now,
+    });
+    
+    await db.insert('stories', {
+      'id': 'demo_story_2',
+      'title': 'Büyülü Bahçe',
+      'content': '''Ali okula giderken garip bir bahçe görmüş. Bahçenin kapısı açıkmış.
+
+İçeri girmiş. Çiçekler konuşuyormuş! "Hoş geldin Ali!" demişler.
+
+Bir gül Ali'ye şaka yapmış. Suyla onu ıslatmış. Ali gülmüş.
+
+Papatyalar dans etmiş. Laleler şarkı söylemiş. Ali çok eğlenmiş.
+
+Eve gitme zamanı gelmiş. Çiçekler üzülmüş. "Yarın gel!" demişler.
+
+Ali her gün o bahçeye gitmeye başlamış. Çiçekler onun en iyi arkadaşları olmuş.''',
+      'category': 'Macera',
+      'grade_level': 1,
+      'word_count': 68,
+      'difficulty': 'easy',
+      'keywords': '["macera","arkadaşlık","hayal gücü"]',
+      'moral_lesson': 'Hayal kurmak güzeldir.',
+      'is_offline': 1,
+      'is_ai_generated': 0,
+      'source': 'builtin',
+      'created_at': now,
+      'updated_at': now,
+    });
+    
+    // 2. Sınıf Hikayeleri
+    await db.insert('stories', {
+      'id': 'demo_story_3',
+      'title': 'Küçük Kedi Minnos',
+      'content': '''Bir zamanlar Minnos adında küçük bir kedi varmış. Minnos çok oyuncu bir kediymiş. Her şeyle oynarmış.
+
+Bir gün yün yumağı bulmuş. Yumağı patisine dolamış. Yuvarlanmaya başlamış. Tüm evi karıştırmış!
+
+Ann
+
+esi eve gelmiş. Evi görmüş. "Minnos ne yaptın?" demiş. Minnos çok utanmış.
+
+"Kusura bakma anne" demiş. "Toplamama yardım eder misin?"
+
+Birlikte evi toplamışlar. Her şeyi yerine koymuşlar. Ev tertemiz olmuş.
+
+Annesi Minnos'u öpmüş. "Hatanı kabul edip düzelttin. Aferin sana!" demiş.
+
+Minnos artık daha dikkatli oynamaya başlamış.''',
+      'category': 'Hayvanlar',
+      'grade_level': 2,
+      'word_count': 98,
+      'difficulty': 'easy',
+      'keywords': '["sorumluluk","hayvanlar","aile","özür"]',
+      'moral_lesson': 'Hatalarımızı kabul etmeliyiz.',
+      'is_offline': 1,
+      'is_ai_generated': 0,
+      'source': 'builtin',
+      'created_at': now,
+      'updated_at': now,
+    });
+    
+    // 3. Sınıf Hikayesi  
+    await db.insert('stories', {
+      'id': 'demo_story_4',
+      'title': 'Orman Koruyucuları',
+      'content': '''Elif ve arkadaşları pikniğe gitmişlerdi. Ormanda güzel vakit geçiriyorlardı. Ama bir şey fark ettiler - her yerde çöp vardı!
+
+Plastik şişeler, poşetler, kağıtlar... Orman kirli görünüyordu. Hayvanlar da rahatsız görünüyordu.
+
+Elif "Biz bu ormanı temizlemeliyiz!" dedi. Arkadaşları da katıldı. Eldiven giydiler, çöp poşetleri aldılar.
+
+Saatlerce çalıştılar. Bütün çöpleri topladılar. Geri dönüşüm için ayırdılar. Orman yeniden güzelleşti.
+
+Bir sincap geldi. "Teşekkür ederiz!" dedi. Kuşlar şarkı söyledi. Tavşanlar zıplayarak sevinç gösterisi yaptı.
+
+Çocuklar çok mutlu oldu. Evlerine dönerken, "Her hafta gelip ormanı kontrol edelim" diye karar verdiler.
+
+Elif ve arkadaşları Orman Koruyucuları kulübünü kurdular. Artık doğayı korumak için çalışıyorlardı.''',
+      'category': 'Doğa',
+      'grade_level': 3,
+      'word_count': 129,
+      'difficulty': 'medium',
+      'keywords': '["doğa","çevre","sorumluluk","takım çalışması"]',
+      'moral_lesson': 'Doğayı korumak hepimizin görevidir.',
+      'is_offline': 1,
+      'is_ai_generated': 0,
+      'source': 'builtin',
+      'created_at': now,
+      'updated_at': now,
+    });
   }
 
   /// Veritabanı upgrade

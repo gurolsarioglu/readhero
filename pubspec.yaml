@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # UI & Icons
   cupertino_icons: ^1.0.8
@@ -35,7 +37,7 @@ dependencies:
   permission_handler: ^11.1.0
   
   # Utilities
-  intl: ^0.19.0
+  intl: any  # flutter_localizations pinned version kullanacak
   uuid: ^4.3.3
   flutter_dotenv: ^5.1.0
   crypto: ^3.0.3

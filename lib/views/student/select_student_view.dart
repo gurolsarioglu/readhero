@@ -65,6 +65,14 @@ class _SelectStudentViewState extends State<SelectStudentView> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
+          // Ebeveyn Girişi Butonu
+          IconButton(
+            icon: const Icon(Icons.admin_panel_settings_outlined),
+            onPressed: () {
+               Navigator.of(context).pushNamed(AppRoutes.rewardManagement); // Şimdilik ödül yönetimine, sonra dashboard'a
+            },
+            tooltip: 'Ebeveyn Paneli',
+          ),
           // Çıkış butonu
           IconButton(
             icon: const Icon(Icons.logout),
